@@ -167,7 +167,7 @@ int readProductsFromFile ( char *filename )
     }
 
     // read file contents till end of file
-    while(fread(&item, sizeof(struct Produtos), 1, infile))  {
+    while( fread(&item, sizeof(struct Produtos), 1, infile)  )  {
         ++QtItems;
         //printf ("id = %d name = %s %s\n", input.id, input.fname, input.lname);
         printf ("--\n");
@@ -219,6 +219,12 @@ int writeProductToFile ( char *filename , struct Produtos *item )
 }
 
 
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
 
 
 int main()
@@ -230,7 +236,6 @@ int main()
   pProduct = &Product;
 
   // Vai ver se existe ficheiro de dados com o inventario e devolve o numero  de produtos nesse ficheiro
-
 
   items = readProductsFromFile ( fileInventario );
 
